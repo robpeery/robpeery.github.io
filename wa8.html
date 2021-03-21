@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Types of Arrests in Denver(2012)</h2>
+  <h3>The chart below details the number arrests made after a specific type of stop within Denver. The chart shows a higher amount of arrests are made from vehicle stops. This is likely attributed to Denver being a very drivable city, and possibly even the effects of bad weather. A further question to look into would be, do the % of vehicular arrests in downtown denver rise during winter?</h3>
+  <li><a href="Weekly Assignment 8 Code.html">Link to code</a></li>
+    <canvas id="myChart"></canvas>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels: ['Vehicular Arrest', 'Pedestrian Arrest'],
+    datasets: [{
+      label: 'apples',
+      data: [612,373],
+      backgroundColor: ["red","blue"]
+    }]
+  }
+});
+</script>
