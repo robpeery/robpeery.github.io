@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Weekly Assignment 11</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Weekly Assignment 11</h3>
+					<p style="color:#CFB87C; font-weight:bold;">Robby Peery</p>
+					<p style="color:#565A5C">April 9 2021</h5>
+				</section>
+				
+
+				<section>
+					<h3>Altair Charts</h3>
+					<head>
+	<script src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+	<title>HTML Template for Week 13</title>
+</head>
+<body>
+
+	<h2>Comparing fuel efficiency and horsepower</h2>
+
+	<div id="vis"></div>
+	<script type="text/javascript">
+		var spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "config": {
+    "view": {
+      "continuousHeight": 400,
+      "continuousWidth": 400
+    }
+  },
+  "data": {
+    "url": "https://vega.github.io/vega-datasets/data/cars.json"
+  },
+  "encoding": {
+    "color": {
+      "field": "Origin",
+      "type": "nominal"
+    },
+    "x": {
+      "field": "Horsepower",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Miles_per_Gallon",
+      "type": "quantitative"
+    }
+  },
+  "mark": "point"
+};  /* JSON dump of your chart's spec */
+		var opt = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
+		vegaEmbed("#vis", spec, opt);
+	</script>
+
+	<p>This relationship is interesting because it is non-linear: fuel efficiency drops rapidly with the increase in horsepower.</p>
+</body>
+					<ul>
+
+				</section>
+
+				<section>
+					<h3>Altair Chart 2</h3>
+
+<body>
+
+	<h2>Comparing profits of different automakers</h2>
+
+	<div id="vis1"></div>
+	<script type="text/javascript">
+		var spec1 = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "values": [
+      {"a": "A", "b": 28}, {"a": "B", "b": 55}, {"a": "C", "b": 43},
+      {"a": "D", "b": 91}, {"a": "E", "b": 81}, {"a": "F", "b": 53},
+      {"a": "G", "b": 19}, {"a": "H", "b": 87}, {"a": "I", "b": 52}
+    ]
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "a", "type": "nominal", "axis": {"labelAngle": 0}},
+    "y": {"field": "b", "type": "quantitative"}
+  }
+} /* JSON dump of your chart's spec */
+		var opt1 = {"renderer": "canvas", "actions": false};  /* Options for the embedding */
+		vegaEmbed("#vis1", spec1, opt1);
+	</script>
+
+	<p>This demonstrates what car company made how much money. (In millions)</p>
+</body>
+					<ul>
+					</section>
+
+				<section>
+					<h3>Starting code for making a chart</h3>	
+					<h2>syntax</h2>
+					<pre><code><script type="text/template">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Weekly Assignment 11</title>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reset.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/theme/black.min.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/monokai.min.css" id="highlight-theme">
+	</head>
+							</script></pre></code>
+						</code></pre>
+				</section>
+
+
+				<section>
+					<h3>The visualizations demonstrate the different relationship between international automakers. It shows that the US is able to make high horsepower cars, while not really caring about MPG </h3>	
+
+				</section>
+				<!-- End of a vertical slide -->
+
+
+				
+
+			</div>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/reveal.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/notes/notes.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/markdown/markdown.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.1.0/plugin/highlight/highlight.min.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'c/t',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
